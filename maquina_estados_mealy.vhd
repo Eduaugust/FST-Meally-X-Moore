@@ -39,7 +39,7 @@ begin
                 end if;
             when B =>
                 if entrada = '1' then
-                    saida <= '1';
+                    saida <= '0';
                     proximo_estado <= C;
                 else
                     saida <= '0';

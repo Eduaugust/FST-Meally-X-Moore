@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/17/2023 17:06:46"
+-- Generated on "11/17/2023 17:21:24"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          maquina_estados_moore
+-- Vhdl Test Bench(with test vectors) for design  :          maquina_estados_mealy
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,25 +28,25 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY maquina_estados_moore_vhd_vec_tst IS
-END maquina_estados_moore_vhd_vec_tst;
-ARCHITECTURE maquina_estados_moore_arch OF maquina_estados_moore_vhd_vec_tst IS
+ENTITY maquina_estados_mealy_vhd_vec_tst IS
+END maquina_estados_mealy_vhd_vec_tst;
+ARCHITECTURE maquina_estados_mealy_arch OF maquina_estados_mealy_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clk : STD_LOGIC;
 SIGNAL entrada : STD_LOGIC;
 SIGNAL reset : STD_LOGIC;
 SIGNAL saida : STD_LOGIC;
-COMPONENT maquina_estados_moore
+COMPONENT maquina_estados_mealy
 	PORT (
 	clk : IN STD_LOGIC;
 	entrada : IN STD_LOGIC;
 	reset : IN STD_LOGIC;
-	saida : BUFFER STD_LOGIC
+	saida : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : maquina_estados_moore
+	i1 : maquina_estados_mealy
 	PORT MAP (
 -- list connections between master ports and signals
 	clk => clk,
@@ -58,13 +58,15 @@ BEGIN
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
-LOOP
+	FOR i IN 1 TO 12
+	LOOP
+		clk <= '0';
+		WAIT FOR 40000 ps;
+		clk <= '1';
+		WAIT FOR 40000 ps;
+	END LOOP;
 	clk <= '0';
-	WAIT FOR 10000 ps;
-	clk <= '1';
-	WAIT FOR 10000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
+WAIT;
 END PROCESS t_prcs_clk;
 
 -- entrada
@@ -73,27 +75,19 @@ BEGIN
 	entrada <= '0';
 	WAIT FOR 20000 ps;
 	entrada <= '1';
-	WAIT FOR 20000 ps;
-	entrada <= '0';
-	WAIT FOR 20000 ps;
-	entrada <= '1';
-	WAIT FOR 20000 ps;
-	entrada <= '0';
-	WAIT FOR 20000 ps;
-	entrada <= '1';
 	WAIT FOR 40000 ps;
 	entrada <= '0';
 	WAIT FOR 20000 ps;
 	entrada <= '1';
-	WAIT FOR 60000 ps;
-	entrada <= '0';
 	WAIT FOR 20000 ps;
-	entrada <= '1';
-	WAIT FOR 100000 ps;
 	entrada <= '0';
-	WAIT FOR 20000 ps;
+	WAIT FOR 10000 ps;
 	entrada <= '1';
-	WAIT FOR 100000 ps;
+	WAIT FOR 70000 ps;
+	entrada <= '0';
+	WAIT FOR 40000 ps;
+	entrada <= '1';
+	WAIT FOR 270000 ps;
 	entrada <= '0';
 WAIT;
 END PROCESS t_prcs_entrada;
@@ -104,10 +98,6 @@ BEGIN
 	reset <= '1';
 	WAIT FOR 10000 ps;
 	reset <= '0';
-	WAIT FOR 390000 ps;
-	reset <= '1';
-	WAIT FOR 20000 ps;
-	reset <= '0';
 WAIT;
 END PROCESS t_prcs_reset;
-END maquina_estados_moore_arch;
+END maquina_estados_mealy_arch;

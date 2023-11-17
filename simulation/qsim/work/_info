@@ -8,34 +8,33 @@ z2
 !i10f 100
 cModel Technology
 Z0 dG:/Meu Drive/FURG/3/SD/FSM-Moore/simulation/qsim
-Emaquina_estados_moore
-Z1 w1700143900
-Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 YZlobdkPHzE;N99jHfcMc3
-Z3 DPx8 cyclonev 19 cyclonev_components 0 22 WF17oJHHbo`b[5Bl5P6_h0
-Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 dfin^_@l97Ngz6cK0kjS62
-Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z6 DPx6 altera 11 dffeas_pack 0 22 ?bDUB9Db2N8iCCALNL;CT3
-Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z10 DPx6 altera 28 altera_primitives_components 0 22 c]VUMXSEi8Z`KM1bem<:B3
+Emaquina_estados_mealy
+Z1 w1700252486
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 N5CzKW88F^ShIK@<7Vek12
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 K8IbX`K5[Y1gJUKg2X_071
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 ?bDUB9Db2N8iCCALNL;CT3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 c]VUMXSEi8Z`KM1bem<:B3
 R0
-Z11 8FSM-Moore.vho
-Z12 FFSM-Moore.vho
+Z10 8meally.vho
+Z11 Fmeally.vho
 l0
-L38
-Vllfdj<8lKQZ0]HX3hJej;1
-!s100 :ggVI>IM6B2=WeN]jia[f0
-Z13 OV;C;10.5b;63
+L36
+Vh;ZPYbmNSfESaYjDE[E263
+!s100 TUiJUmO`1nPQ?6fZ5nUL53
+Z12 OV;C;10.5b;63
 32
-Z14 !s110 1700143901
+Z13 !s110 1700252488
 !i10b 1
-Z15 !s108 1700143900.000000
-Z16 !s90 -work|work|FSM-Moore.vho|
-Z17 !s107 FSM-Moore.vho|
+Z14 !s108 1700252488.000000
+Z15 !s90 -work|work|meally.vho|
+Z16 !s107 meally.vho|
 !i113 1
-Z18 o-work work
-Z19 tExplicit 1 CvgOpt 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -45,58 +44,149 @@ R6
 R7
 R8
 R9
-R10
-DEx4 work 21 maquina_estados_moore 0 22 llfdj<8lKQZ0]HX3hJej;1
-l72
-L47
-Vzga`Nb<Cdzo>52onU9eE41
-!s100 Y_>5N;<Dj54In8?U31^;^1
-R13
+DEx4 work 21 maquina_estados_mealy 0 22 h;ZPYbmNSfESaYjDE[E263
+l67
+L45
+V=YBRBoY384OSK0G_RTJb70
+!s100 U1oUeY@O<_[EkA3D`hR;V2
+R12
 32
-R14
+R13
 !i10b 1
+R14
 R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
-Emaquina_estados_moore_vhd_vec_tst
-Z20 w1700143898
+Emaquina_estados_mealy_vhd_vec_tst
+Z19 w1700252484
+R7
+R8
+R0
+Z20 8Waveform9.vwf.vht
+Z21 FWaveform9.vwf.vht
+l0
+L31
+VhPV5Ga7Z?<nCJI[GM`=U90
+!s100 WD3lk9VmBMHYC=T:]_AdF3
+R12
+32
+Z22 !s110 1700252489
+!i10b 1
+R14
+Z23 !s90 -work|work|Waveform9.vwf.vht|
+Z24 !s107 Waveform9.vwf.vht|
+!i113 1
+R17
+R18
+Amaquina_estados_mealy_arch
+R7
+R8
+DEx4 work 33 maquina_estados_mealy_vhd_vec_tst 0 22 hPV5Ga7Z?<nCJI[GM`=U90
+l48
+L33
+V]1<UgnzeDQ=S>QAKLdlmh0
+!s100 [PFNZ:Cc@chkXl]RBCeoT1
+R12
+32
+R22
+!i10b 1
+R14
+R23
+R24
+!i113 1
+R17
+R18
+Emaquina_estados_moore
+Z25 w1700251608
+Z26 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 YZlobdkPHzE;N99jHfcMc3
+Z27 DPx8 cyclonev 19 cyclonev_components 0 22 WF17oJHHbo`b[5Bl5P6_h0
+Z28 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 dfin^_@l97Ngz6cK0kjS62
+R4
+R5
+R6
+R7
 R8
 R9
 R0
-Z21 8Waveform.vwf.vht
-Z22 FWaveform.vwf.vht
+Z29 8FSM-Moore.vho
+Z30 FFSM-Moore.vho
+l0
+L38
+VgG^Z>0C9JN`dP7z4DR6]b2
+!s100 <ETG^`V:mgM@6@c>I3E@Y2
+R12
+32
+Z31 !s110 1700253977
+!i10b 1
+Z32 !s108 1700253977.000000
+Z33 !s90 -work|work|FSM-Moore.vho|
+Z34 !s107 FSM-Moore.vho|
+!i113 1
+R17
+R18
+Astructure
+R26
+R27
+R28
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 21 maquina_estados_moore 0 22 gG^Z>0C9JN`dP7z4DR6]b2
+l74
+L47
+VTeaZbA6Td?Q``zO;=z@;]1
+!s100 oPE0`Y`OzfnBK7<[>;Ec20
+R12
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R17
+R18
+Emaquina_estados_moore_vhd_vec_tst
+Z35 w1700251606
+R7
+R8
+R0
+Z36 8Waveform.vwf.vht
+Z37 FWaveform.vwf.vht
 l0
 L31
 V^TZHn3S<[[MaE[DC7^MLi1
 !s100 RK1_Hk<6lLZ:bZF<B=lG>1
-R13
+R12
 32
-R14
+R31
 !i10b 1
-Z23 !s108 1700143901.000000
-Z24 !s90 -work|work|Waveform.vwf.vht|
-Z25 !s107 Waveform.vwf.vht|
+R32
+Z38 !s90 -work|work|Waveform.vwf.vht|
+Z39 !s107 Waveform.vwf.vht|
 !i113 1
+R17
 R18
-R19
 Amaquina_estados_moore_arch
+R7
 R8
-R9
-Z26 DEx4 work 33 maquina_estados_moore_vhd_vec_tst 0 22 ^TZHn3S<[[MaE[DC7^MLi1
+Z40 DEx4 work 33 maquina_estados_moore_vhd_vec_tst 0 22 ^TZHn3S<[[MaE[DC7^MLi1
 l48
 L33
-V5P:gW4zN;gRT7YL2]Dz5D2
-!s100 Z<:id8kjgUV48ai<_QI2_3
-R13
+Z41 VSzn2gF48Sd0hG8j6DIzbA1
+Z42 !s100 fZ2kRIIB[4eHB]H=^;:lz1
+R12
 32
-R14
+R31
 !i10b 1
-R23
-R24
-R25
+R32
+R38
+R39
 !i113 1
+R17
 R18
-R19

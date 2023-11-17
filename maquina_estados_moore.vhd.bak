@@ -20,8 +20,17 @@ begin
     begin
         if reset = '1' then
             estado_atual <= A;
+            saida <= '0';
         elsif rising_edge(clk) then
             estado_atual <= proximo_estado;
+            case estado_atual is
+                when A =>
+                    saida <= '0';
+                when B =>
+                    saida <= '0';
+                when C =>
+                    saida <= '1';
+            end case;
         end if;
     end process sincrono;
 
@@ -30,23 +39,20 @@ begin
     begin
         case estado_atual is
             when A =>
-                saida <= '0';
                 if entrada = '1' then
                     proximo_estado <= B;
                 else
                     proximo_estado <= A;
                 end if;
             when B =>
-                saida <= '0';
                 if entrada = '1' then
                     proximo_estado <= C;
                 else
                     proximo_estado <= A;
                 end if;
             when C =>
-                saida <= '1';
                 if entrada = '1' then
-                    proximo_estado <= C;
+                    proximo_estado <= B;
                 else
                     proximo_estado <= A;
                 end if;

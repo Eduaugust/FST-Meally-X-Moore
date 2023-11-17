@@ -1,14 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity maquina_estados_moore is
+entity maquina_estados_mealy is
     port(
         clk, reset, entrada: in std_logic;
         saida: out std_logic
     );
-end entity maquina_estados_moore;
+end entity maquina_estados_mealy;
 
-architecture comportamento of maquina_estados_moore is
+architecture comportamento of maquina_estados_mealy is
 
 type estado is (A,B,C);
 signal estado_atual, proximo_estado: estado;
@@ -30,24 +30,27 @@ begin
     begin
         case estado_atual is
             when A =>
-                saida <= '0';
                 if entrada = '1' then
+                    saida <= '0';
                     proximo_estado <= B;
                 else
+                    saida <= '0';
                     proximo_estado <= A;
                 end if;
             when B =>
-                saida <= '0';
                 if entrada = '1' then
+                    saida <= '1';
                     proximo_estado <= C;
                 else
+                    saida <= '0';
                     proximo_estado <= A;
                 end if;
             when C =>
-                saida <= '1';
                 if entrada = '1' then
-                    proximo_estado <= C;
+                    saida <= '1';
+                    proximo_estado <= B;
                 else
+                    saida <= '0';
                     proximo_estado <= A;
                 end if;
         end case;

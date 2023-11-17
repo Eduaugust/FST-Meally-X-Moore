@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, G:/Meu Drive/FURG/3/SD/FSM-Moore/maquina_estados_mealy.vhd
+source_file = 1, G:/Meu Drive/FURG/3/SD/FSM-Moore/Waveform9.vwf
+source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, G:/Meu Drive/FURG/3/SD/FSM-Moore/db/meally.cbx.xml
+design_name = maquina_estados_mealy
+instance = comp, \saida~output\, saida~output, maquina_estados_mealy, 1
+instance = comp, \entrada~input\, entrada~input, maquina_estados_mealy, 1
+instance = comp, \clk~input\, clk~input, maquina_estados_mealy, 1
+instance = comp, \reset~input\, reset~input, maquina_estados_mealy, 1
+instance = comp, \estado_atual.A\, estado_atual.A, maquina_estados_mealy, 1
+instance = comp, \saida~1\, saida~1, maquina_estados_mealy, 1
